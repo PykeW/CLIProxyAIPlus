@@ -2,6 +2,7 @@
 cli-proxy-api
 cliproxy
 *.exe
+*~
 
 # Configuration
 config.yaml
@@ -17,23 +18,26 @@ gitstore/*
 objectstore/*
 static/*
 refs/*
+models.json
+models-data.js
+models*.html
+API-REFERENCE.txt
 
 # Authentication data
 auths/*
 !auths/.gitkeep
-
-# Documentation
-docs/*
-AGENTS.md
-CLAUDE.md
-GEMINI.md
 
 # Tooling metadata
 .vscode/*
 .claude/*
 .serena/*
 .mcp/cache/
+.factory/*
 
 # macOS
 .DS_Store
 ._*
+
+# Backup files
+*.bak
+backup_*/

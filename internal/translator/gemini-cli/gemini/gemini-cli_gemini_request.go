@@ -180,13 +180,13 @@ func fixCLIToolResponse(input string) (string, error) {
 					// Create merged function response content
 					var responseParts []interface{}
 					for _, response := range groupResponses {
-						var responseMap map[string]interface{}
-						errUnmarshal := json.Unmarshal([]byte(response.Raw), &responseMap)
+						var responseData interface{}
+						errUnmarshal := json.Unmarshal([]byte(response.Raw), &responseData)
 						if errUnmarshal != nil {
-							log.Warnf("failed to unmarshal function response: %v\n", errUnmarshal)
+							log.Warnf("failed to unmarshal function response: %v, raw: %s\n", errUnmarshal, response.Raw)
 							continue
 						}
-						responseParts = append(responseParts, responseMap)
+						responseParts = append(responseParts, responseData)
 					}
 
 					if len(responseParts) > 0 {
@@ -265,13 +265,13 @@ func fixCLIToolResponse(input string) (string, error) {
 
 			var responseParts []interface{}
 			for _, response := range groupResponses {
-				var responseMap map[string]interface{}
-				errUnmarshal := json.Unmarshal([]byte(response.Raw), &responseMap)
+			var responseData interface{}
+			errUnmarshal := json.Unmarshal([]byte(response.Raw), &responseData)
 				if errUnmarshal != nil {
-					log.Warnf("failed to unmarshal function response: %v\n", errUnmarshal)
+				log.Warnf("failed to unmarshal function response: %v, raw: %s\n", errUnmarshal, response.Raw)
 					continue
 				}
-				responseParts = append(responseParts, responseMap)
+			responseParts = append(responseParts, responseData)
 			}
 
 			if len(responseParts) > 0 {
