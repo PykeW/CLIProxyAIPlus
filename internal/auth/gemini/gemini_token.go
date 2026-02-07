@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/misc"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/misc"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/config"
-	sdkAuth "github.com/PykeW/CLIProxyAIPlus/sdk/auth"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
 	log "github.com/sirupsen/logrus"
 )
 

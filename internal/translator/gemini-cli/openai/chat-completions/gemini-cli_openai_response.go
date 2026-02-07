@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	. "github.com/PykeW/CLIProxyAIPlus/internal/translator/gemini/openai/chat-completions"
+	. "github.com/router-for-me/CLIProxyAPI/v6/internal/translator/gemini/openai/chat-completions"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )

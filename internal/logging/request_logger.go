@@ -20,9 +20,9 @@ import (
 	"github.com/klauspost/compress/zstd"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/buildinfo"
-	"github.com/PykeW/CLIProxyAIPlus/internal/interfaces"
-	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/buildinfo"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
 )
 
 // RequestLogger defines the interface for logging HTTP requests and responses.

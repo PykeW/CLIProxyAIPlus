@@ -9,7 +9,7 @@ import (
 	"context"
 	"fmt"
 
-	. "github.com/PykeW/CLIProxyAIPlus/internal/translator/openai/gemini"
+	. "github.com/router-for-me/CLIProxyAPI/v6/internal/translator/openai/gemini"
 	"github.com/tidwall/sjson"
 )
 

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/auth/gemini"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/auth/gemini"
 	// legacy client removed
-	"github.com/PykeW/CLIProxyAIPlus/internal/config"
-	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
 )
 
 // GeminiAuthenticator implements the login flow for Google Gemini CLI accounts.

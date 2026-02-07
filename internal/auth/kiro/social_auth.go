@@ -18,9 +18,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/browser"
-	"github.com/PykeW/CLIProxyAIPlus/internal/config"
-	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/browser"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/term"
 )

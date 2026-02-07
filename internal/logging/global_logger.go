@@ -10,7 +10,7 @@ import (
 	"sync"
 
 	"github.com/gin-gonic/gin"
-	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/natefinch/lumberjack.v2"
 )

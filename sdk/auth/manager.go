@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/config"
-	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
 )
 
 // Manager aggregates authenticators and coordinates persistence via a token store.

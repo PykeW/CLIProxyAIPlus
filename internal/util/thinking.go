@@ -1,7 +1,7 @@
 package util
 
 import (
-	"github.com/PykeW/CLIProxyAIPlus/internal/registry"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/registry"
 )
 
 // ModelSupportsThinking reports whether the given model has Thinking capability

@@ -15,7 +15,7 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )

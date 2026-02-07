@@ -6,9 +6,9 @@ package cliproxy
 import (
 	"context"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/config"
-	"github.com/PykeW/CLIProxyAIPlus/internal/watcher"
-	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/watcher"
+	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
 )
 
 // TokenClientProvider loads clients backed by stored authentication tokens.

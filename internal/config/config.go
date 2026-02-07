@@ -12,7 +12,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/PykeW/CLIProxyAIPlus/sdk/config"
+	"github.com/router-for-me/CLIProxyAPI/v6/sdk/config"
 	"golang.org/x/crypto/bcrypt"
 	"gopkg.in/yaml.v3"
 )

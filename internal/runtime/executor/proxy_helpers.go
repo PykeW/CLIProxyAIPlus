@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/PykeW/CLIProxyAIPlus/internal/config"
-	cliproxyauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
+	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	cliproxyauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/proxy"
 )
