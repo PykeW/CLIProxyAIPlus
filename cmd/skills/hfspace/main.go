@@ -12,6 +12,27 @@ import (
 	"github.com/router-for-me/CLIProxyAPI/v6/internal/skills/hfspace"
 )
 
+func readTokenFromFile(path string) string {
+	f, err := os.Open(strings.TrimSpace(path))
+	if err != nil {
+		return ""
+	}
+	defer func() { _ = f.Close() }()
+	sc := bufio.NewScanner(f)
+	var last string
+	for sc.Scan() {
+		line := strings.TrimSpace(sc.Text())
+		if line != "" {
+			last = line
+		}
+	}
+	t := strings.TrimSpace(last)
+	if strings.HasPrefix(t, "hf_") {
+		return t
+	}
+	return ""
+}
+
 func main() {
 	space := flag.String("space", "", "")
 	kind := flag.String("kind", "build", "")
@@ -22,8 +43,7 @@ func main() {
 	flag.Parse()
 	token := strings.TrimSpace(*tokenArg)
 	if token == "" && strings.TrimSpace(*tokenFile) != "" {
-		b, _ := os.ReadFile(strings.TrimSpace(*tokenFile))
-		token = strings.TrimSpace(string(b))
+		token = readTokenFromFile(*tokenFile)
 	}
 	if token == "" {
 		token = strings.TrimSpace(os.Getenv("HF_TOKEN"))
@@ -31,9 +51,7 @@ func main() {
 	if token == "" {
 		wd, _ := os.Getwd()
 		p := wd + string(os.PathSeparator) + ".trae" + string(os.PathSeparator) + "skills" + string(os.PathSeparator) + "hf-log-recovery" + string(os.PathSeparator) + "token.local"
-		if b, err := os.ReadFile(p); err == nil {
-			token = strings.TrimSpace(string(b))
-		}
+		token = readTokenFromFile(p)
 	}
 	if token == "" {
 		fmt.Println("missing env HF_TOKEN")
