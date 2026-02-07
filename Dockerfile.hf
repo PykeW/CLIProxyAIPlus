@@ -6,7 +6,12 @@ ENV GOPROXY=https://proxy.golang.org,direct
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
+# 尝试修复依赖关系
+RUN go mod tidy
 COPY . .
+
+# 尝试修复依赖关系 (必须在 COPY 之后，因为需要扫描源代码)
+RUN go mod tidy
 
 # 构建
 ARG VERSION=dev
