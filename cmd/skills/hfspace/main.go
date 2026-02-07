@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/skills/hfspace"
+	"github.com/router-for-me/CLIProxyAPI/internal/skills/hfspace"
 )
 
 func readTokenFromFile(path string) string {

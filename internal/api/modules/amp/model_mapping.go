@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
+	"github.com/router-for-me/CLIProxyAPI/internal/config"
+	"github.com/router-for-me/CLIProxyAPI/internal/util"
 	log "github.com/sirupsen/logrus"
 )
 

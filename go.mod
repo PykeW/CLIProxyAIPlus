@@ -1,4 +1,4 @@
-module github.com/router-for-me/CLIProxyAPI/v6
+module github.com/router-for-me/CLIProxyAPI
 
 go 1.24.0
 
@@ -76,4 +76,3 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )
 
-replace github.com/router-for-me/CLIProxyAPI/v6 => .

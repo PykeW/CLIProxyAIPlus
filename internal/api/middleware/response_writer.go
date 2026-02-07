@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
+	"github.com/router-for-me/CLIProxyAPI/internal/interfaces"
+	"github.com/router-for-me/CLIProxyAPI/internal/logging"
 )
 
 // RequestInfo holds essential details of an incoming HTTP request for logging purposes.

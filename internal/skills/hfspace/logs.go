@@ -100,12 +100,12 @@ type Diagnosis struct {
 func Diagnose(lines []string) []Diagnosis {
 	ds := make([]Diagnosis, 0, 8)
 	text := strings.Join(lines, "\n")
-	if strings.Contains(text, "does not contain package github.com/router-for-me/CLIProxyAPI/v6") {
+	if strings.Contains(text, "does not contain package github.com/router-for-me/CLIProxyAPI") {
 		ds = append(ds, Diagnosis{
 			Title:  "模块路径不匹配",
 			Reason: "远端 v1.x 被解析为 /v6 导入",
 			Actions: []string{
-				"在 go.mod 添加: replace github.com/router-for-me/CLIProxyAPI/v6 => .",
+				"在 go.mod 添加: replace github.com/router-for-me/CLIProxyAPI => .",
 				"执行 go mod tidy && go mod vendor 并重新构建",
 			},
 		})

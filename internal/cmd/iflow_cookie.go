@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/auth/iflow"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	"github.com/router-for-me/CLIProxyAPI/internal/auth/iflow"
+	"github.com/router-for-me/CLIProxyAPI/internal/config"
 )
 
 // DoIFlowCookieAuth performs the iFlow cookie-based authentication.

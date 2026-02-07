@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/registry"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
-	cliproxyexecutor "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
+	"github.com/router-for-me/CLIProxyAPI/internal/registry"
+	"github.com/router-for-me/CLIProxyAPI/internal/util"
+	cliproxyexecutor "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/executor"
 	log "github.com/sirupsen/logrus"
 )
 
