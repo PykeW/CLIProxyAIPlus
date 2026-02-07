@@ -27,24 +27,24 @@ jobs:
             exit 1
           fi
 
-          # 准备 Hugging Face 专用文件
-          # 1. 把 Dockerfile.hf 重命名为 Dockerfile (HF 只识别 Dockerfile)
+          # -------------------------------------------------------------------------
+          # 彻底重构推送逻辑：重建 Git 仓库以清除所有历史和大文件
+          # -------------------------------------------------------------------------
+
+          # 1. 准备文件
           mv Dockerfile.hf Dockerfile
+          # 删除不需要的目录和文件
+          rm -rf asset/ad .git
 
-          # 2. 删除不需要的二进制文件 (HF 禁止直接上传二进制文件)
-          rm -f asset/ad/chinese.png asset/ad/english.png
-
-          # 3. 提交这个变更 (只在临时同步分支中生效，不影响原仓库)
+          # 2. 初始化全新的 Git 仓库
+          git init
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
-          # 添加 Dockerfile
-          git add Dockerfile
+          # 3. 添加所有文件 (此时已经没有大文件了)
+          git add .
+          git commit -m "Deploy to Hugging Face"
 
-          # 移除二进制文件记录 (如果它们之前被跟踪过)
-          git rm --cached asset/ad/chinese.png asset/ad/english.png || true
-
-          git commit -m "Prepare for HF deployment" || echo "No changes to commit"
-
+          # 4. 强制推送 (覆盖 HF 上的所有内容)
           echo "Pushing to Hugging Face Space: $HF_SPACE_NAME"
-          git push https://oauth2:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_NAME HEAD:main --force
+          git push https://oauth2:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_NAME master:main --force
