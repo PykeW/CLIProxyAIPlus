@@ -1,4 +1,4 @@
-module github.com/router-for-me/CLIProxyAPI
+module github.com/PykeW/CLIProxyAIPlus
 
 go 1.24.0
 
