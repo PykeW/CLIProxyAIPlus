@@ -7,6 +7,9 @@
     "ace-text_search",
     "filesystem-readterminal-execute",
     "notebook-add",
-    "filesystem-edit_search"
+    "filesystem-edit_search",
+    "filesystem-readtodo-add",
+    "ide-get_diagnostics",
+    "filesystem-readtodo-get"
   ]
 }

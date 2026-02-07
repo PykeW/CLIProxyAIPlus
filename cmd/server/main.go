@@ -86,6 +86,8 @@ func main() {
 	var password string
 	var noIncognito bool
 	var useIncognito bool
+	var hostFlag string
+	var portFlag int
 
 	// Define command-line flags for different operation modes.
 	flag.BoolVar(&login, "login", false, "Login Google Account")
@@ -107,6 +109,8 @@ func main() {
 	flag.StringVar(&configPath, "config", DefaultConfigPath, "Configure File Path")
 	flag.StringVar(&vertexImport, "vertex-import", "", "Import Vertex service account key JSON file")
 	flag.StringVar(&password, "password", "", "")
+	flag.StringVar(&hostFlag, "host", "", "Server host to bind")
+	flag.IntVar(&portFlag, "port", 0, "Server port to listen")
 
 	flag.CommandLine.Usage = func() {
 		out := flag.CommandLine.Output()
@@ -407,6 +411,12 @@ func main() {
 	}
 	if cfg == nil {
 		cfg = &config.Config{}
+	}
+	if strings.TrimSpace(hostFlag) != "" {
+		cfg.Host = strings.TrimSpace(hostFlag)
+	}
+	if portFlag > 0 {
+		cfg.Port = portFlag
 	}
 
 	// In cloud deploy mode, check if we have a valid configuration
