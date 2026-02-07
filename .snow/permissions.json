@@ -6,6 +6,7 @@
     "terminal-execute",
     "ace-text_search",
     "filesystem-readterminal-execute",
-    "notebook-add"
+    "notebook-add",
+    "filesystem-edit_search"
   ]
 }

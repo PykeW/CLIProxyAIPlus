@@ -2,11 +2,9 @@ FROM golang:1.24-alpine AS builder
 
 WORKDIR /app
 
-COPY go.mod go.sum ./
+COPY . .
 
 RUN go mod download
-
-COPY . .
 
 ARG VERSION=dev
 ARG COMMIT=none
