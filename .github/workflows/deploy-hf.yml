@@ -41,7 +41,21 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
-          # 3. 添加所有文件 (此时已经没有大文件了)
+          # 3. 生成 Hugging Face 必需的 README.md 配置
+          # 注意：必须包含 sdk: docker
+          echo "---" > README.md
+          echo "title: CLIProxyAIPlus" >> README.md
+          echo "emoji: 🚀" >> README.md
+          echo "colorFrom: blue" >> README.md
+          echo "colorTo: purple" >> README.md
+          echo "sdk: docker" >> README.md
+          echo "pinned: false" >> README.md
+          echo "---" >> README.md
+          # 追加原本的 README 内容 (可选，这里为了简单直接覆盖，避免格式冲突)
+          echo "" >> README.md
+          echo "# CLIProxyAI Plus on Hugging Face" >> README.md
+
+          # 4. 添加所有文件
           git add .
           git commit -m "Deploy to Hugging Face"
 
