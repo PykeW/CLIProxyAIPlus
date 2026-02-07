@@ -5,6 +5,7 @@ go 1.24.0
 replace github.com/router-for-me/CLIProxyAPI => .
 
 require github.com/router-for-me/CLIProxyAPI v0.0.0
+require github.com/PykeW/CLIProxyAIPlus v0.0.0
 
 require (
 	github.com/andybalholm/brotli v1.0.6
