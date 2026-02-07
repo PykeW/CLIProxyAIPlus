@@ -11,12 +11,18 @@ RUN go mod tidy
 COPY . .
 
 # 尝试修复依赖关系 (必须在 COPY 之后，因为需要扫描源代码)
-RUN go mod tidy
+# 尝试修复依赖关系 (必须在 COPY 之后，因为需要扫描源代码)
+# 如果本地已经有 vendor 目录，这一步其实可以跳过，或者作为双重保险
+# RUN go mod tidy
 
-# 构建
-ARG VERSION=dev
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w -X 'main.Version=${VERSION}-plus'" -o ./CLIProxyAPIPlus ./cmd/server/
-
+# 构建 (使用 vendor 模式，如果 vendor 目录存在)
+# 注意：如果 vendor 不存在，去掉 -mod=vendor
+RUN if [ -d "vendor" ]; then \
+        CGO_ENABLED=0 GOOS=linux go build -mod=vendor -ldflags="-s -w -X 'main.Version=${VERSION}-plus'" -o ./CLIProxyAPIPlus ./cmd/server/; \
+    else \
+        go mod tidy && \
+        CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w -X 'main.Version=${VERSION}-plus'" -o ./CLIProxyAPIPlus ./cmd/server/; \
+    fi
 FROM alpine:3.22.0
 
 # 安装基础工具和 gettext (用于 envsubst)
