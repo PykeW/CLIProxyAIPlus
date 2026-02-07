@@ -1,27 +1,34 @@
-# CLIProxyAPI Plus
+# CLI Proxy AI Plus
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Issues](https://img.shields.io/github/issues/riofach/CLIProxyAIPlus.svg)](https://github.com/riofach/CLIProxyAIPlus/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/riofach/CLIProxyAIPlus.svg)](https://github.com/riofach/CLIProxyAIPlus/stargazers)
+A powerful proxy server for AI CLI tools.
 
-🚀 **Enhanced fork** of [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) with additional third-party provider support and improved tooling.
+## Features
 
-## 📖 Table of Contents
+- **Multi-Provider Support**: Compatible with various AI providers.
+- **Usage Tracking**: Detailed usage statistics and logging.
+- **Secure Configuration**: Environment variable injection for secrets.
+- **Docker Ready**: Optimized for deployment on Hugging Face Spaces.
+- **Cloudflare Integration**: Seamless reverse proxy setup.
 
-- [What's New](#whats-new)
-- [Quick Start](#quick-start)
-- [Features](#features)
-- [Supported Providers](#supported-providers)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
+## Deployment
 
-## ✨ What's New
+### Hugging Face Spaces
 
-### 🔧 Improvements in This Fork
+This project is configured for deployment on Hugging Face Spaces using Docker.
+The `Dockerfile.hf` (renamed to `Dockerfile` by GitHub Actions) handles the build process.
 
-- ✅ **Fixed JSON unmarshaling bug** - Better handling of function responses from Factory/Antigravity
+### Configuration
+
+Set the following environment variables in your Hugging Face Space secrets:
+
+- `HF_TOKEN`: Your Hugging Face token.
+- `HF_SPACE_NAME`: The name of your space (e.g., `user/space`).
+- `MY_SECRET_KEY`: Your application secret key.
+
+## Build Status
+
+[![Deploy to Hugging Face](https://github.com/router-for-me/CLIProxyAIPlus/actions/workflows/deploy-hf.yml/badge.svg)](https://github.com/router-for-me/CLIProxyAIPlus/actions/workflows/deploy-hf.yml)
+
 - ✅ **All-in-one setup script** (`setup.ps1`) - Complete management interface
 - ✅ **Auto-generated API keys** - No manual configuration needed
 - ✅ **Improved debugging** - Enhanced logging for troubleshooting
@@ -43,12 +50,14 @@
 ### Installation & Setup
 
 1. **Clone the repository**
+
    ```powershell
    git clone https://github.com/riofach/CLIProxyAIPlus.git
    cd CLIProxyAIPlus
    ```
 
 2. **Run the all-in-one setup script**
+
    ```powershell
    .\setup.ps1
    ```
@@ -77,10 +86,12 @@ That's it! Your proxy server is now running. 🎉
 Complete management interface with:
 
 #### 🔧 Setup & Config
+
 - `[1]` **Setup Config** - Auto-generates API key and creates config.yaml
 - `[2]` **Edit Config** - Modify server settings
 
 #### 🔐 Provider Login
+
 - `[3]` Gemini CLI
 - `[4]` OpenAI Codex
 - `[5]` Claude Code
@@ -91,16 +102,19 @@ Complete management interface with:
 - `[10]` Antigravity
 
 #### ⚙️ Server Operations
+
 - `[11]` **Start Server** - Launch the proxy
 - `[12]` **Test API** - Verify connection and list models
 - `[13]` **View Status** - Check server health
 
 #### 🔧 Troubleshooting
+
 - `[14]` **Fix 401 Error** - Auto-diagnostic for auth issues
 - `[15]` **System Check** - Full health verification
 - `[16]` **View Logs** - Check server logs
 
 #### 🛠️ Maintenance
+
 - `[17]` **Update Repository** - Pull latest changes
 - `[18]` **Backup** - Save config and auth files
 - `[19]` **Documentation** - Access guides
@@ -115,28 +129,30 @@ Complete management interface with:
 
 ## 🌐 Supported Providers
 
-| Provider | Login Method | Status | Notes |
-|----------|--------------|--------|-------|
-| **Gemini CLI** | OAuth | ✅ Stable | Google account required |
-| **Antigravity** | OAuth | ✅ Stable | Recommended for testing |
-| **OpenAI Codex** | OAuth | ✅ Stable | ChatGPT subscription |
-| **Claude Code** | OAuth | ✅ Stable | Claude subscription |
-| **GitHub Copilot** | OAuth | ✅ Plus | Copilot subscription |
-| **Qwen** | OAuth | ✅ Stable | Qwen account |
-| **iFlow** | OAuth | ✅ Stable | iFlow account |
-| **Kiro** | OAuth/AWS | ✅ Plus | AWS CodeWhisperer |
+| Provider           | Login Method | Status    | Notes                   |
+| ------------------ | ------------ | --------- | ----------------------- |
+| **Gemini CLI**     | OAuth        | ✅ Stable | Google account required |
+| **Antigravity**    | OAuth        | ✅ Stable | Recommended for testing |
+| **OpenAI Codex**   | OAuth        | ✅ Stable | ChatGPT subscription    |
+| **Claude Code**    | OAuth        | ✅ Stable | Claude subscription     |
+| **GitHub Copilot** | OAuth        | ✅ Plus   | Copilot subscription    |
+| **Qwen**           | OAuth        | ✅ Stable | Qwen account            |
+| **iFlow**          | OAuth        | ✅ Stable | iFlow account           |
+| **Kiro**           | OAuth/AWS    | ✅ Plus   | AWS CodeWhisperer       |
 
 ## 📝 Usage
 
 ### Starting the Server
 
 **Option 1: Using setup.ps1 (Recommended)**
+
 ```powershell
 .\setup.ps1
 # Select [11] Start Server
 ```
 
 **Option 2: Direct execution**
+
 ```powershell
 .\cli-proxy-api.exe -config config.yaml
 ```
@@ -144,12 +160,14 @@ Complete management interface with:
 ### Testing the API
 
 **Using setup.ps1:**
+
 ```powershell
 .\setup.ps1
 # Select [12] Test API & List Models
 ```
 
 **Using curl:**
+
 ```powershell
 curl http://localhost:8317/v1/models `
   -H "Authorization: Bearer YOUR-API-KEY"
@@ -205,12 +223,14 @@ Contributions are welcome! This fork focuses on:
 #### 401 Unauthorized Error
 
 **Run auto-diagnostic:**
+
 ```powershell
 .\setup.ps1
 # Select [14] Fix 401 Error
 ```
 
 The script will:
+
 - ✅ Check config.yaml format
 - ✅ Verify API key format
 - ✅ Test server connection
@@ -221,6 +241,7 @@ The script will:
 **Cause:** No provider is logged in
 
 **Solution:**
+
 ```powershell
 .\setup.ps1
 # Select [10] Login to Antigravity (or any provider)
@@ -230,6 +251,7 @@ The script will:
 #### Server Won't Start
 
 **Run system check:**
+
 ```powershell
 .\setup.ps1
 # Select [15] Full System Check
@@ -268,6 +290,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by the community**
 
-*Star ⭐ this repo if you find it useful!*
+_Star ⭐ this repo if you find it useful!_
 
 </div>

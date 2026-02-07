@@ -1,0 +1,60 @@
+{
+  "deployment_notes.md": [
+    {
+      "id": "notebook-1770436482998_qw5ns7lip",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ ACTION PLAN: Since the user hasn't triggered a new build, I will trigger a commit to force a new build. This commit will include a small change (e.g., updating a comment or README) to ensure the latest state (without sdk/go.mod) is picked up by the build system.",
+      "createdAt": "2026-02-07T11:54:42.998",
+      "updatedAt": "2026-02-07T11:54:42.998"
+    },
+    {
+      "id": "notebook-1770436463227_in0dzn1he",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ Verified: `go.mod` does NOT contain `replace` directives. If `sdk` is intended to be a submodule, it's missing from `go.mod`. But if it's just a directory, it should work fine. Given that `sdk/go.mod` does not exist, it is just a directory.",
+      "createdAt": "2026-02-07T11:54:23.227",
+      "updatedAt": "2026-02-07T11:54:23.227"
+    },
+    {
+      "id": "notebook-1770436442669_8ck2vipt9",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ Found a potential issue: `go.mod` uses `module github.com/router-for-me/CLIProxyAPI/v6`. If the Docker build copies files to `/app` and runs `go mod download`, it might not realize that `/app/sdk` is part of the module if it's looking for `github.com/router-for-me/CLIProxyAPI/v6/sdk`. But Go modules usually handle this relative path automatically if everything is in the root.",
+      "createdAt": "2026-02-07T11:54:02.669",
+      "updatedAt": "2026-02-07T11:54:02.669"
+    },
+    {
+      "id": "notebook-1770436425112_h7sez1l62",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ HYPOTHESIS: The previous failure might have been due to `GOPROXY` trying to fetch the module from the internet because it couldn't resolve it locally for some reason, OR the Docker build context didn't include `sdk` directory properly? But `COPY . .` should include it.",
+      "createdAt": "2026-02-07T11:53:45.112",
+      "updatedAt": "2026-02-07T11:53:45.112"
+    },
+    {
+      "id": "notebook-1770436407288_ycxuy6y76",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ Wait, the error is `internal/usage/logger_plugin.go:14:2: no required module provides package github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/usage`. This error typically means the package IS found, but it's not provided by any *required* module. But since it's in the SAME module, it shouldn't need a `require`. UNLESS `sdk` is excluded from the module? No, that's not possible in Go.",
+      "createdAt": "2026-02-07T11:53:27.288",
+      "updatedAt": "2026-02-07T11:53:27.288"
+    },
+    {
+      "id": "notebook-1770436389052_idvhoytku",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ One more possibility: `go mod download` might be failing to find the module because the `go.mod` file itself is not being copied correctly or is being overwritten? No, COPY . . copies everything.",
+      "createdAt": "2026-02-07T11:53:09.052",
+      "updatedAt": "2026-02-07T11:53:09.052"
+    },
+    {
+      "id": "notebook-1770436370887_2l04vjezl",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ Possible issue: If internal/usage/logger_plugin.go imports github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/usage, and go.mod defines module github.com/router-for-me/CLIProxyAPI/v6, Go should find it locally. If it fails, it might be because of a subtle path mismatch or a cache issue.",
+      "createdAt": "2026-02-07T11:52:50.887",
+      "updatedAt": "2026-02-07T11:52:50.887"
+    },
+    {
+      "id": "notebook-1770436351959_me5rddocd",
+      "filePath": "deployment_notes.md",
+      "note": "⚠️ Confirmed that sdk/go.mod was NEVER tracked in git. The build failure on HF cannot be due to this file being present in the repo. Investigating other causes.",
+      "createdAt": "2026-02-07T11:52:31.959",
+      "updatedAt": "2026-02-07T11:52:31.959"
+    }
+  ]
+}
