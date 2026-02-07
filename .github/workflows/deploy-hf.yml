@@ -31,11 +31,20 @@ jobs:
           # 1. 把 Dockerfile.hf 重命名为 Dockerfile (HF 只识别 Dockerfile)
           mv Dockerfile.hf Dockerfile
 
-          # 2. 提交这个变更 (只在临时同步分支中生效，不影响原仓库)
+          # 2. 删除不需要的二进制文件 (HF 禁止直接上传二进制文件)
+          rm -f asset/ad/chinese.png asset/ad/english.png
+
+          # 3. 提交这个变更 (只在临时同步分支中生效，不影响原仓库)
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
+
+          # 添加 Dockerfile
           git add Dockerfile
-          git commit -m "Use HF-specific Dockerfile" || echo "No changes to commit"
+
+          # 移除二进制文件记录 (如果它们之前被跟踪过)
+          git rm --cached asset/ad/chinese.png asset/ad/english.png || true
+
+          git commit -m "Prepare for HF deployment" || echo "No changes to commit"
 
           echo "Pushing to Hugging Face Space: $HF_SPACE_NAME"
           git push https://oauth2:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_NAME HEAD:main --force
