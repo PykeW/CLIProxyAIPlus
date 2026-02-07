@@ -4,6 +4,7 @@
     "filesystem-create",
     "filesystem-edit",
     "terminal-execute",
-    "ace-text_search"
+    "ace-text_search",
+    "filesystem-readterminal-execute"
   ]
 }
