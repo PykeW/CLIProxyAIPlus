@@ -23,14 +23,14 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/api"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	clipexec "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
-	sdktr "github.com/router-for-me/CLIProxyAPI/v6/sdk/translator"
+	"github.com/PykeW/CLIProxyAIPlus/internal/api"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/logging"
+	sdkAuth "github.com/PykeW/CLIProxyAIPlus/sdk/auth"
+	"github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
+	clipexec "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/executor"
+	sdktr "github.com/PykeW/CLIProxyAIPlus/sdk/translator"
 )
 
 const (

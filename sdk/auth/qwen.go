@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/auth/qwen"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/browser"
+	"github.com/PykeW/CLIProxyAIPlus/internal/auth/qwen"
+	"github.com/PykeW/CLIProxyAIPlus/internal/browser"
 	// legacy client removed
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 )
 

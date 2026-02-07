@@ -20,14 +20,14 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	kiroauth "github.com/router-for-me/CLIProxyAPI/v6/internal/auth/kiro"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/runtime/geminicli"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	kiroauth "github.com/PykeW/CLIProxyAIPlus/internal/auth/kiro"
+	"github.com/PykeW/CLIProxyAIPlus/internal/runtime/geminicli"
 	"gopkg.in/yaml.v3"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	sdkAuth "github.com/PykeW/CLIProxyAIPlus/sdk/auth"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/registry"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/registry"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -3,8 +3,8 @@ package amp
 import (
 	"testing"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/registry"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/registry"
 )
 
 func TestNewModelMapper(t *testing.T) {

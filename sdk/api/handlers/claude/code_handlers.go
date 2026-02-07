@@ -18,10 +18,10 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	. "github.com/router-for-me/CLIProxyAPI/v6/internal/constant"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/registry"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/api/handlers"
+	. "github.com/PykeW/CLIProxyAIPlus/internal/constant"
+	"github.com/PykeW/CLIProxyAIPlus/internal/interfaces"
+	"github.com/PykeW/CLIProxyAIPlus/internal/registry"
+	"github.com/PykeW/CLIProxyAIPlus/sdk/api/handlers"
 	log "github.com/sirupsen/logrus"
 	"github.com/tidwall/gjson"
 )
