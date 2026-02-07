@@ -77,4 +77,3 @@ require (
 )
 
 replace github.com/router-for-me/CLIProxyAPI/v6 => .
-replace github.com/router-for-me/CLIProxyAPI => .
