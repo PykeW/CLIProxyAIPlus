@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	sdkaccess "github.com/router-for-me/CLIProxyAPI/sdk/access"
-	sdkconfig "github.com/router-for-me/CLIProxyAPI/sdk/config"
+	sdkaccess "github.com/PykeW/CLIProxyAIPlus/sdk/access"
+	sdkconfig "github.com/PykeW/CLIProxyAIPlus/sdk/config"
 )
 
 var registerOnce sync.Once

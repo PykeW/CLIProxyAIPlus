@@ -10,8 +10,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/internal/api/handlers/management"
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/api/handlers/management"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
 )
 
 func init() {

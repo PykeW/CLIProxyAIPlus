@@ -17,8 +17,8 @@ import (
 
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
-	"github.com/router-for-me/CLIProxyAPI/internal/misc"
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
+	"github.com/PykeW/CLIProxyAIPlus/internal/misc"
+	cliproxyauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 )
 

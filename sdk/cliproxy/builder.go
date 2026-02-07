@@ -6,11 +6,11 @@ package cliproxy
 import (
 	"fmt"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/api"
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
-	sdkaccess "github.com/router-for-me/CLIProxyAPI/sdk/access"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/sdk/auth"
-	coreauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
+	"github.com/PykeW/CLIProxyAIPlus/internal/api"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	sdkaccess "github.com/PykeW/CLIProxyAIPlus/sdk/access"
+	sdkAuth "github.com/PykeW/CLIProxyAIPlus/sdk/auth"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 )
 
 // Builder constructs a Service instance with customizable providers.

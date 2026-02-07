@@ -18,7 +18,7 @@ import (
 	"github.com/go-git/go-git/v6/plumbing/object"
 	"github.com/go-git/go-git/v6/plumbing/transport"
 	"github.com/go-git/go-git/v6/plumbing/transport/http"
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
+	cliproxyauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 )
 
 // GitTokenStore persists token records and auth metadata using git as the backing storage.

@@ -3,7 +3,7 @@ package auth
 import (
 	"sync"
 
-	coreauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 )
 
 var (

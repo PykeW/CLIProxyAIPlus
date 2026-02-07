@@ -8,7 +8,7 @@ package geminiCLI
 import (
 	"bytes"
 
-	. "github.com/router-for-me/CLIProxyAPI/internal/translator/openai/gemini"
+	. "github.com/PykeW/CLIProxyAIPlus/internal/translator/openai/gemini"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )

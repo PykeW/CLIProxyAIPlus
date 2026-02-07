@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
 )
 
 func TestLegacyConfigMigration(t *testing.T) {

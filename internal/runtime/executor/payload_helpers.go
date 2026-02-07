@@ -3,8 +3,8 @@ package executor
 import (
 	"strings"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/internal/util"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/util"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )

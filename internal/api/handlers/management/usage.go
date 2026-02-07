@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/internal/usage"
+	"github.com/PykeW/CLIProxyAIPlus/internal/usage"
 )
 
 // GetUsageStatistics returns the in-memory request statistics snapshot.

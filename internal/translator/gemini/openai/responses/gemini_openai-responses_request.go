@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/translator/gemini/common"
-	"github.com/router-for-me/CLIProxyAPI/internal/util"
+	"github.com/PykeW/CLIProxyAIPlus/internal/translator/gemini/common"
+	"github.com/PykeW/CLIProxyAIPlus/internal/util"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )

@@ -16,9 +16,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/internal/util"
-	sdkconfig "github.com/router-for-me/CLIProxyAPI/sdk/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	sdkconfig "github.com/PykeW/CLIProxyAIPlus/sdk/config"
 	log "github.com/sirupsen/logrus"
 )
 

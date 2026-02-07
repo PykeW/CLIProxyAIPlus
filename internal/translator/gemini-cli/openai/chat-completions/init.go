@@ -1,9 +1,9 @@
 package chat_completions
 
 import (
-	. "github.com/router-for-me/CLIProxyAPI/internal/constant"
-	"github.com/router-for-me/CLIProxyAPI/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/internal/translator/translator"
+	. "github.com/PykeW/CLIProxyAIPlus/internal/constant"
+	"github.com/PykeW/CLIProxyAIPlus/internal/interfaces"
+	"github.com/PykeW/CLIProxyAIPlus/internal/translator/translator"
 )
 
 func init() {

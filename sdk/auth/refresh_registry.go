@@ -3,7 +3,7 @@ package auth
 import (
 	"time"
 
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
+	cliproxyauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 )
 
 func init() {

@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/misc"
+	"github.com/PykeW/CLIProxyAIPlus/internal/misc"
 )
 
 // QwenTokenStorage stores OAuth2 token information for Alibaba Qwen API authentication.

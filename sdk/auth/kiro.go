@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	kiroauth "github.com/router-for-me/CLIProxyAPI/internal/auth/kiro"
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
-	coreauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
+	kiroauth "github.com/PykeW/CLIProxyAIPlus/internal/auth/kiro"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
 )
 
 // extractKiroIdentifier extracts a meaningful identifier for file naming.

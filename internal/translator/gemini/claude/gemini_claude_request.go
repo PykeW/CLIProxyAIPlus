@@ -10,9 +10,9 @@ import (
 	"encoding/json"
 	"strings"
 
-	client "github.com/router-for-me/CLIProxyAPI/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/internal/translator/gemini/common"
-	"github.com/router-for-me/CLIProxyAPI/internal/util"
+	client "github.com/PykeW/CLIProxyAIPlus/internal/interfaces"
+	"github.com/PykeW/CLIProxyAIPlus/internal/translator/gemini/common"
+	"github.com/PykeW/CLIProxyAIPlus/internal/util"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
 )

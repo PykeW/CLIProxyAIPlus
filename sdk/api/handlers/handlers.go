@@ -11,12 +11,12 @@ import (
 	"sync"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/internal/util"
-	coreauth "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/auth"
-	coreexecutor "github.com/router-for-me/CLIProxyAPI/sdk/cliproxy/executor"
-	"github.com/router-for-me/CLIProxyAPI/sdk/config"
-	sdktranslator "github.com/router-for-me/CLIProxyAPI/sdk/translator"
+	"github.com/PykeW/CLIProxyAIPlus/internal/interfaces"
+	"github.com/PykeW/CLIProxyAIPlus/internal/util"
+	coreauth "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/auth"
+	coreexecutor "github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy/executor"
+	"github.com/PykeW/CLIProxyAIPlus/sdk/config"
+	sdktranslator "github.com/PykeW/CLIProxyAIPlus/sdk/translator"
 	"golang.org/x/net/context"
 )
 

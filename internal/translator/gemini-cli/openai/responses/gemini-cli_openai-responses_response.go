@@ -3,7 +3,7 @@ package responses
 import (
 	"context"
 
-	. "github.com/router-for-me/CLIProxyAPI/internal/translator/gemini/openai/responses"
+	. "github.com/PykeW/CLIProxyAIPlus/internal/translator/gemini/openai/responses"
 	"github.com/tidwall/gjson"
 )
 

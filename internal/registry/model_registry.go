@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	misc "github.com/router-for-me/CLIProxyAPI/internal/misc"
+	misc "github.com/PykeW/CLIProxyAIPlus/internal/misc"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/api"
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/sdk/cliproxy"
+	"github.com/PykeW/CLIProxyAIPlus/internal/api"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	"github.com/PykeW/CLIProxyAIPlus/sdk/cliproxy"
 	log "github.com/sirupsen/logrus"
 )
 

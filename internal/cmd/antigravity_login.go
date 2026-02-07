@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/router-for-me/CLIProxyAPI/internal/config"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/sdk/auth"
+	"github.com/PykeW/CLIProxyAIPlus/internal/config"
+	sdkAuth "github.com/PykeW/CLIProxyAIPlus/sdk/auth"
 	log "github.com/sirupsen/logrus"
 )
 
