@@ -4,25 +4,14 @@ FROM golang:1.24-alpine AS builder
 ENV GOPROXY=https://proxy.golang.org,direct
 
 WORKDIR /app
-COPY go.mod go.sum ./
-RUN go mod download
-# 尝试修复依赖关系
-RUN go mod tidy
+# 先复制所有代码 (为了解决本地包依赖识别问题)
 COPY . .
 
-# 尝试修复依赖关系 (必须在 COPY 之后，因为需要扫描源代码)
-# 尝试修复依赖关系 (必须在 COPY 之后，因为需要扫描源代码)
-# 如果本地已经有 vendor 目录，这一步其实可以跳过，或者作为双重保险
-# RUN go mod tidy
+# 然后再下载依赖
+RUN go mod download && go mod tidy
 
-# 构建 (使用 vendor 模式，如果 vendor 目录存在)
-# 注意：如果 vendor 不存在，去掉 -mod=vendor
-RUN if [ -d "vendor" ]; then \
-        CGO_ENABLED=0 GOOS=linux go build -mod=vendor -ldflags="-s -w -X 'main.Version=${VERSION}-plus'" -o ./CLIProxyAPIPlus ./cmd/server/; \
-    else \
-        go mod tidy && \
-        CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w -X 'main.Version=${VERSION}-plus'" -o ./CLIProxyAPIPlus ./cmd/server/; \
-    fi
+# 构建
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w -X 'main.Version=${VERSION}-plus'" -o ./CLIProxyAPIPlus ./cmd/server/
 FROM alpine:3.22.0
 
 # 安装基础工具和 gettext (用于 envsubst)
