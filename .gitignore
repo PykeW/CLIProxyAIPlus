@@ -41,3 +41,5 @@ auths/*
 # Backup files
 *.bak
 backup_*/
+.trae/*
+.trae/skills/hf-log-recovery/token.local
